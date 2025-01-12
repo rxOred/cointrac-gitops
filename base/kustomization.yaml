@@ -1,0 +1,7 @@
+resources:
+- crds/
+- rbac/cluster_role.yaml
+- rbac/cluster_role_binding.yaml
+- rbac/role.yaml
+- rbac/role_binding.yaml
+- operator/operator-deployment.yaml
