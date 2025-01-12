@@ -4,29 +4,40 @@ kind: ClusterRole
 metadata:
   name: manager-role
 rules:
-- apiGroups:
-  - cointrac.cointrac.operator
-  resources:
-  - cointracpipelines
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - cointrac.cointrac.operator
-  resources:
-  - cointracpipelines/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - cointrac.cointrac.operator
-  resources:
-  - cointracpipelines/status
-  verbs:
-  - get
-  - patch
-  - update
+  - apiGroups:
+      - cointrac.cointrac.operator
+    resources:
+      - cointracpipelines
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - cointrac.cointrac.operator
+    resources:
+      - cointracpipelines/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - cointrac.cointrac.operator
+    resources:
+      - cointracpipelines/status
+    verbs:
+      - get
+      - patch
+      - update
+  - apiGroups:
+      - coordination.k8s.io
+    resources:
+      - leases
+    verbs:
+      - create
+      - get
+      - list
+      - patch
+      - update
+      - watch
