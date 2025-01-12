@@ -1,5 +1,5 @@
 resources:
-  - base/cointrac.cointrac.operator_cointracpipelines.yaml
+  - crds/cointrac.cointrac.operator_cointracpipelines.yaml
   - rbac/role.yaml
   - rbac/role_binding.yaml
   - operator/operator-deployment.yaml
