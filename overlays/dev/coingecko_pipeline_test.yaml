@@ -1,0 +1,12 @@
+apiVersion: cointrac.cointrac.operator/v1
+kind: CointracPipeline
+metadata:
+  name: cointrac-pipeline-test
+  namespace: default
+spec:
+  api:
+    endpoint: "https://api.coingecko.com/api/v3/simple/price"
+    params:
+      ids: "bitcoin,ethereum"
+      vs_currencies: "usd"
+  schedule: "*/5 * * * *" # Example: Fetch data every 5 minutes
