@@ -1,5 +1,14 @@
 resources:
   - crds/cointrac.cointrac.operator_cointracpipelines.yaml
-  - rbac/role.yaml
+  - rbac/cointracpipeline_editor_role.yaml
+  - rbac/cointracpipeline_viewer_role.yaml
+  - rbac/kustomization.yaml
+  - rbac/leader_election_role_binding.yaml
+  - rbac/leader_election_role.yaml
+  - rbac/metrics_auth_role_binding.yaml
+  - rbac/metrics_auth_role.yaml
+  - rbac/metrics_reader_role.yaml
   - rbac/role_binding.yaml
+  - rbac/role.yaml
+  - rbac/service_account.yaml
   - operator/operator-deployment.yaml
